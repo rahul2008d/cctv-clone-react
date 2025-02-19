@@ -19,7 +19,7 @@ const CameraStream = () => {
       .catch((err) => console.error("Error accessing camera: ", err));
 
     // Connect to WebSocket server
-    const ws = new WebSocket("ws://127.0.0.1:8000/ws/stream");
+    const ws = new WebSocket("wss://localhost:8000/ws/stream");
 
     ws.onopen = () => {
       console.log("WebSocket Connected");
